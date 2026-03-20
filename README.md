@@ -1,11 +1,11 @@
-# ☁️ Práctica IaaS — Azure Virtual Machines
+# Práctica IaaS — Azure Virtual Machines
 
 **Universidad Autónoma de Occidente**  
 Computación en la Nube · Prof. Oscar H. Mondragón
 
 ---
 
-## 📌 ¿Qué es IaaS?
+## ¿Qué es IaaS?
 
 **Infrastructure as a Service (IaaS)** es el modelo de servicio en la nube donde el proveedor (en este caso Microsoft Azure) se encarga del hardware físico, la red y la virtualización. Tú, como usuario, gestionas todo lo que está encima: el sistema operativo, el middleware, los datos y las aplicaciones.
 
@@ -36,13 +36,13 @@ Computación en la Nube · Prof. Oscar H. Mondragón
 
 ---
 
-## 🎯 Objetivo de la Práctica
+## Objetivo de la Práctica
 
 Comprender el funcionamiento de IaaS creando y gestionando máquinas virtuales en Azure desde cero, usando tanto el portal web como Azure CLI y templates ARM.
 
 ---
 
-## 🛠️ Herramientas necesarias
+## Herramientas necesarias
 
 Antes de correr el script asegúrate de tener instalado:
 
@@ -60,7 +60,7 @@ az login
 
 ---
 
-## ⚙️ Configuración del script
+## Configuración del script
 
 Antes de correr el script, edita estas variables al inicio de `practica-iaas.ps1`:
 
@@ -71,11 +71,11 @@ $ADMIN_PASS   = "TuPassword@123!"            # Contraseña (mínimo 12 chars, ma
 $SSH_KEY      = "C:\ruta\a\tu\clave.pem"     # Ruta a tu llave SSH privada
 ```
 
-> ⚠️ **Importante:** la suscripción de Azure for Students tiene un límite de **6 vCPUs** en la región `centralus` y solo permite ciertas familias de VM. El script usa `Standard_D2s_v3` (2 vCPUs). Por eso los ejercicios 1+2, 3 y 4 no pueden estar activos simultáneamente — hay que matar uno antes de levantar el siguiente.
+> **Importante:** la suscripción de Azure for Students tiene un límite de **6 vCPUs** en la región `centralus` y solo permite ciertas familias de VM. El script usa `Standard_D2s_v3` (2 vCPUs). Por eso los ejercicios 1+2, 3 y 4 no pueden estar activos simultáneamente — hay que matar uno antes de levantar el siguiente.
 
 ---
 
-## 🚀 Uso del script
+## Uso del script
 
 ### Menú interactivo (recomendado para la sustentación)
 
@@ -123,7 +123,7 @@ Aparece este menú y se muestra el estado actual de todas las VMs:
 
 ---
 
-## 📋 Ejercicios
+## Ejercicios
 
 ### Ejercicio 1 — VM Ubuntu con Apache (IaaS básico)
 
@@ -243,7 +243,7 @@ Mostrar el **Server Manager** abierto con la VM `vm-windows` visible en la lista
 
 ---
 
-## 📊 Resumen de recursos creados
+## Resumen de recursos creados
 
 | Ejercicio | Resource Group | VM | SO | Tamaño |
 |-----------|---------------|----|----|--------|
@@ -251,11 +251,11 @@ Mostrar el **Server Manager** abierto con la VM `vm-windows` visible en la lista
 | 3 | practica-template-rg | simpleLinuxVM | Ubuntu 22.04 | Standard_D2s_v3 |
 | 4 | practica-windows-rg | vm-windows | Windows Server 2022 | Standard_D2s_v3 |
 
-> ⚠️ **Límite de cuota:** la suscripción Azure for Students solo permite 6 vCPUs totales en `centralus`. Cada VM usa 2 vCPUs, por lo que solo pueden coexistir máximo 3 VMs — y en la práctica, solo 2 a la vez para no agotar la familia DSv3 (límite 4).
+> **Límite de cuota:** la suscripción Azure for Students solo permite 6 vCPUs totales en `centralus`. Cada VM usa 2 vCPUs, por lo que solo pueden coexistir máximo 3 VMs — y en la práctica, solo 2 a la vez para no agotar la familia DSv3 (límite 4).
 
 ---
 
-## 🗂️ Estructura del repositorio
+## Estructura del repositorio
 
 ```
 practica-iaas/
@@ -265,7 +265,7 @@ practica-iaas/
 
 ---
 
-## 💡 Flujo recomendado para la sustentación
+## Flujo recomendado para la sustentación
 
 ```
 1. .\practica-iaas.ps1
