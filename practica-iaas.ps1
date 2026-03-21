@@ -56,7 +56,7 @@ function Levantar-Ej12 {
         --image Ubuntu2204 `
         --size Standard_D2s_v3 `
         --admin-username $ADMIN_USER `
-        --ssh-key-values "$SSH_KEY.pub" `
+        --generate-ssh-keys `
         --public-ip-sku Standard `
         --output none
 
